@@ -1,0 +1,413 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 8,
+    "passes": 4,
+    "pending": 0,
+    "failures": 4,
+    "start": "2021-08-25T09:17:56.626Z",
+    "end": "2021-08-25T09:20:52.654Z",
+    "duration": 149967,
+    "testsRegistered": 8,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d0cbbb56-2ee6-4a85-bc28-836c6adf5703",
+      "title": "",
+      "fullFile": "cypress/integration/examples/auftragAngebotDraft.spec.js",
+      "file": "cypress/integration/examples/auftragAngebotDraft.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "aa0b5f80-f3a9-4d6a-86fc-c7334afab536",
+          "title": "End to End validation of order, offer & draft process",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Auftrag für Bestandskunden erstellen ohne Task",
+              "fullTitle": "End to End validation of order, offer & draft process Auftrag für Bestandskunden erstellen ohne Task",
+              "timedOut": null,
+              "duration": 25373,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/examples/auftragAngebotDraft.spec.js/End to End validation of order, offer & draft process --       Auftrag für Bestandskunden erstellen ohne Task (failed).png\"",
+              "code": "cy.get('.button-email > :nth-child(1) > .btn').click();\ncy.wait(1000);\ncy.get('.search-contact-input-group > .form-control').type(\"Arnold\");\ncy.contains(\"Arnold Stallone\").click();\ncy.get('.col-md-12 > .form-control').type(\"Cypress test\");\ncy.get('#product').type(\"Cypress position\");\ncy.get(':nth-child(11) > sev-product-list > .invoice-product-list > .form-inline > .sev-product-list-item-width-fix > .df-sb > .product-row > :nth-child(2) > .flex > sev-input-number.p-r-0-on-child > .form-control').type(\"2\");\ncy.get(':nth-child(11) > sev-product-list > .invoice-product-list > .form-inline > .sev-product-list-item-width-fix > .df-sb > .product-row > [ng-show=\"showNet\"] > .form-control').type(\"250\");\ncy.get('#regular_price').should(\"have.text\", \"500,00 EUR\");\ncy.get('.save-group > :nth-child(3) > .btn').click();\ncy.get('.create-task-no').click();\ncy.url().should(\"include\", \"order/index\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.save-group > :nth-child(3) > .btn`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.save-group > :nth-child(3) > .btn`, but never found it.\n    at Context.eval (https://www.tralumaxpress.de/__cypress/tests?p=cypress/integration/examples/auftragAngebotDraft.spec.js:32:8)",
+                "diff": null
+              },
+              "uuid": "5d6e687f-62d7-4a63-955e-16a31ffa2ce2",
+              "parentUUID": "aa0b5f80-f3a9-4d6a-86fc-c7334afab536",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "5d6e687f-62d7-4a63-955e-16a31ffa2ce2"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 25373,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "b276cbb2-9d83-4fe8-bc96-fcb4f53e5194",
+      "title": "",
+      "fullFile": "cypress/integration/examples/kunde.spec.js",
+      "file": "cypress/integration/examples/kunde.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "be7ec382-c8ea-46ef-b55e-72a860fab0cd",
+          "title": "End to End validation of customer",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Privatkunde in Listenansicht korrekt angezeigt",
+              "fullTitle": "End to End validation of customer Privatkunde in Listenansicht korrekt angezeigt",
+              "timedOut": null,
+              "duration": 18436,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/examples/kunde.spec.js/End to End validation of customer --       Privatkunde in Listenansicht korrekt angezeigt (failed).png\"",
+              "code": "cy.get(':nth-child(5) > [href=\"javascript:void(0);\"] > .menu-text').click();\ncy.contains(\"Kundenstamm\").click();\ncy.get('.sorting_asc').click();\ncy.get('tbody > :nth-child(1) > :nth-child(2)').should(\"have.text\", \"Personen\");\ncy.get('tbody > :nth-child(1) > :nth-child(3)').should(\"have.text\", \"Frau Test Cypress\");\ncy.get('tbody > :nth-child(1) > :nth-child(4)').should(\"have.text\", \"Landsberger Straße 289\");\ncy.get('tbody > :nth-child(1) > :nth-child(5)').should(\"have.text\", \"80687\");\ncy.get('tbody > :nth-child(1) > :nth-child(6)').should(\"have.text\", \"München\");\ncy.get('tbody > :nth-child(1) > :nth-child(7)').should(\"have.text\", \"Deutschland\");\ncy.get('tbody > :nth-child(1) > :nth-child(8)').should(\"be.visible\");\ncy.get('tbody > :nth-child(1) > :nth-child(9)').should(\"have.text\", \"person@cypress.com\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.sorting_asc`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.sorting_asc`, but never found it.\n    at Context.eval (https://www.tralumaxpress.de/__cypress/tests?p=cypress/integration/examples/kunde.spec.js:48:8)",
+                "diff": null
+              },
+              "uuid": "8e60192d-fbd2-488f-bc66-1ee73b9e23a5",
+              "parentUUID": "be7ec382-c8ea-46ef-b55e-72a860fab0cd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "8e60192d-fbd2-488f-bc66-1ee73b9e23a5"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 18436,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "f1652d31-b690-45c1-8bfc-a52277ce70b8",
+      "title": "",
+      "fullFile": "cypress/integration/examples/portalUmzug.spec.js",
+      "file": "cypress/integration/examples/portalUmzug.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ca5df814-427c-4042-88fd-4e479271b592",
+          "title": "End to End validation of customer on portal",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Umzug normal anlegen",
+              "fullTitle": "End to End validation of customer on portal Umzug normal anlegen",
+              "timedOut": null,
+              "duration": 11524,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.col-sm-12 > #source_address').type(\"Landsberger str 289\");\ncy.get('.pac-item').first().click();\ncy.get('#destination_address').type(\"Am Schlosspark 12 82131\");\ncy.get('.pac-item').first().click();\ncy.get('#pickdate').click();\nportal.getPortalDatepicker().click();\ncy.get('.check-price > .btn').click();\ncy.get(':nth-child(2) > [style=\"padding:10px;\"] > .row > :nth-child(2) > .add > img').click();\ncy.get('.middle > .btn').click();\ncy.get('[data-attribute=\"1071\"] > :nth-child(2) > .select-object > img').click();\ncy.get('#spinner-1071 > .counter-plus').click();",
+              "err": {},
+              "uuid": "68a1b5b9-1343-4e40-aeba-8f8cdce68591",
+              "parentUUID": "ca5df814-427c-4042-88fd-4e479271b592",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "68a1b5b9-1343-4e40-aeba-8f8cdce68591"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11524,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "5795a520-aa55-44f4-9a18-a376a0a395ea",
+      "title": "",
+      "fullFile": "cypress/integration/examples/rechnung.spec.js",
+      "file": "cypress/integration/examples/rechnung.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4db0ec41-d071-4298-87a3-728d29cb0094",
+          "title": "End to End validation of bill",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Rechnung für Bestandskunden erstellen",
+              "fullTitle": "End to End validation of bill Rechnung für Bestandskunden erstellen",
+              "timedOut": null,
+              "duration": 19233,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/examples/rechnung.spec.js/End to End validation of bill --       Rechnung für Bestandskunden erstellen (failed).png\"",
+              "code": "cy.get('.button-email > :nth-child(2) > .btn').click();\ncy.wait(1000);\ncy.get('.search-contact-input-group > .form-control').type(\"Arnold\");\ncy.contains(\"Arnold Stallone\").click();\ncy.get('.col-md-12 > .form-control').type(\"Cypress test\");\ncy.get('#product').type(\"Cypress position\");\ncy.get('sev-input-number.p-r-0-on-child > .form-control').type(\"2\");\ncy.get('[ng-show=\"showNet\"] > .form-control').clear().type(\"250\");\ncy.get('#regular_price').should(\"have.text\", \"500,00 EUR\");\ncy.get('.save-group > :nth-child(3) > .btn').click();\ncy.get('[style=\"padding:18px 100px 18px 15px\"] > .table > tbody > :nth-child(1) > td').should(\"be.visible\");\ncy.get('[style=\"padding:18px 100px 18px 15px\"] > .table > tbody > :nth-child(2) > td').should(\"be.visible\");\ncy.get('[style=\"width: 100%;\"] > :nth-child(2) > table > tbody > :nth-child(1) > td').should(\"have.text\", \"Cypress position\");\ncy.get('[style=\"width: 100%;\"] > :nth-child(3)').should(\"have.text\", \"2,00\");\ncy.get('[style=\"width: 100%;\"] > :nth-child(5)').should(\"have.text\", \"250,00 EUR\");\ncy.get('[style=\"width: 100%;\"] > [style=\"text-align: right; padding:10px 35px 10px 10px;border-bottom: 1px solid #ece9e9;\"]').should(\"have.text\", \"500,00 EUR\");\ncy.get(':nth-child(8) > [colspan=\"4\"] > table > tbody > :nth-child(1) > [style=\"text-align: right; padding:10px 35px 10px 10px;border-bottom: 1px solid #ece9e9;\"]').should(\"have.text\", \"500,00 EUR\");",
+              "err": {
+                "message": "CypressError: `cy.type()` can only be called on a single element. Your subject contained 2 elements.\n\nhttps://on.cypress.io/type",
+                "estack": "CypressError: `cy.type()` can only be called on a single element. Your subject contained 2 elements.\n\nhttps://on.cypress.io/type\n    at Context.type (https://www.tralumaxpress.de/__cypress/runner/cypress_runner.js:139745:17)\n    at Context.<anonymous> (https://www.tralumaxpress.de/__cypress/runner/cypress_runner.js:157771:21)\nFrom Your Spec Code:\n    at Context.eval (https://www.tralumaxpress.de/__cypress/tests?p=cypress/integration/examples/rechnung.spec.js:26:63)",
+                "diff": null
+              },
+              "uuid": "7c443c24-51cc-49d5-8129-85955e9cb159",
+              "parentUUID": "4db0ec41-d071-4298-87a3-728d29cb0094",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "7c443c24-51cc-49d5-8129-85955e9cb159"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 19233,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "9f28fe7f-7b3e-4af1-8021-77dca482c288",
+      "title": "",
+      "fullFile": "cypress/integration/examples/regresion.spec.js",
+      "file": "cypress/integration/examples/regresion.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4ef24b7b-b304-492f-b309-5267e97b9520",
+          "title": "End to End validation von Rollen & Rechten",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Mit Manager Kunden anlegen",
+              "fullTitle": "End to End validation von Rollen & Rechten Mit Manager Kunden anlegen",
+              "timedOut": null,
+              "duration": 25394,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/examples/regresion.spec.js/End to End validation von Rollen & Rechten --       Mit Manager Kunden anlegen (failed).png\"",
+              "code": "cy.get(':nth-child(7) > .btn').click();\ncy.get(':nth-child(5) > .toggle > .toggle-group > .active').click();\ncy.get('select#title').select('Frau');\ncy.get('#Customer_first_name').type(\"Test\");\ncy.get('#Customer_last_name').type(\"Cypress\");\ncy.get('#street_name').type(\"Landsberger str 289\");\ncy.get('.pac-item').first().click();\ncy.get('#Customer_user_email').type(\"person@cypress.com\");\ncy.get('#Customer_mobile').type(\"17682278398\");\ncy.get('#Customer_website').type(\"www.person.com\");\ncy.get('#Customer_tax').type(\"10\");\ncy.get('#CustomerPosition_title').type(\"Cypress\");\ncy.get('#CustomerPosition_amount').type(\"100\");\ncy.get('select[name=\"unit[]\"]').select('KM');\ncy.get('.row.pull-right > :nth-child(2) > .btn').click();\ncy.get('.search-title > h6').should(\"have.text\", \"\\n                                Personen                            \");\ncy.get('.search-title > p').should(\"be.visible\");\ncy.get(':nth-child(1) > :nth-child(2) > .search-box > .search-table > tbody > :nth-child(3) > .search-title').should(\"be.visible\");\ncy.get(':nth-child(3) > .search-box > .search-table > tbody > :nth-child(3) > .search-title').should(\"be.visible\");\ncy.get(':nth-child(4) > .search-title').should(\"be.visible\");\ncy.get(':nth-child(3) > .search-title > .search-table > tbody > tr > .text-right').should(\"have.text\", \"10.00%\");\ncy.get('[style=\"width:50%;padding-top:5px;padding-bottom:5px;\"]').should(\"have.text\", \"Cypress\");\ncy.get('[style=\"width:33.33%;padding-top:5px;padding-bottom:5px;\"]').should(\"have.text\", \"KM\");\ncy.get(':nth-child(4) > :nth-child(2) > .search-box > .table > :nth-child(1) > :nth-child(2) > .search-title > .search-table > tbody > tr > .text-right').should(\"have.text\", \"100,00 EUR\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<td.text-right>' to have text '100,00 EUR', but the text was '100,00 USD'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<td.text-right>' to have text '100,00 EUR', but the text was '100,00 USD'\n    at Context.eval (https://www.tralumaxpress.de/__cypress/tests?p=cypress/integration/examples/regresion.spec.js:1450:159)",
+                "diff": "- '100,00 USD'\n+ '100,00 EUR'\n"
+              },
+              "uuid": "e0e8f5c3-9831-415e-88c3-95c2a5ea6a4b",
+              "parentUUID": "4ef24b7b-b304-492f-b309-5267e97b9520",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Mit Manager Kunden suchen",
+              "fullTitle": "End to End validation von Rollen & Rechten Mit Manager Kunden suchen",
+              "timedOut": null,
+              "duration": 13037,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[style=\"text-align:center;\"] > a > .icon').click();\ncy.get('.block-group > :nth-child(1) > :nth-child(2) > .form-control').type(\"Cypress\");\ncy.wait(2000);\ncy.get(':nth-child(6) > .col-md-12 > #example_wrapper > #example > tbody > :nth-child(1) > .sorting_1').should(\"be.visible\");",
+              "err": {},
+              "uuid": "0177ed0b-b39c-4ba0-bd15-62c7923a7991",
+              "parentUUID": "4ef24b7b-b304-492f-b309-5267e97b9520",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Mit Manager Privatkunden löschen",
+              "fullTitle": "End to End validation von Rollen & Rechten Mit Manager Privatkunden löschen",
+              "timedOut": null,
+              "duration": 16011,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(':nth-child(5) > [href=\"javascript:void(0);\"] > .menu-text').click();\ncy.contains(\"Kundenstamm\").click();\ncy.get(':nth-child(1) > .action-buttons > .icon-remove > .icon').click();\ncy.wait(1500);",
+              "err": {},
+              "uuid": "439c1f6c-ebc9-48be-8bc5-d9ca678d242c",
+              "parentUUID": "4ef24b7b-b304-492f-b309-5267e97b9520",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Mit Manager Angebot für Bestandskunden erstellen in Netto",
+              "fullTitle": "End to End validation von Rollen & Rechten Mit Manager Angebot für Bestandskunden erstellen in Netto",
+              "timedOut": null,
+              "duration": 20959,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.button-email > :nth-child(2) > .btn').click();\ncy.wait(1000);\ncy.get('.search-contact-input-group > .form-control').type(\"Arnold\");\ncy.contains(\"Arnold Stallone\").click();\ncy.get('.col-md-12 > .form-control').type(\"Cypress test\");\ncy.get('#product').type(\"Cypress position\");\ncy.get(':nth-child(11) > sev-product-list > .invoice-product-list > .form-inline > .sev-product-list-item-width-fix > .df-sb > .product-row > :nth-child(2) > .flex > sev-input-number.p-r-0-on-child > .form-control').type(\"2\");\ncy.get(':nth-child(11) > sev-product-list > .invoice-product-list > .form-inline > .sev-product-list-item-width-fix > .df-sb > .product-row > [ng-show=\"showNet\"] > .form-control').type(\"250\");\ncy.get('#regular_price').should(\"have.text\", \"500,00 EUR\");\ncy.get('.save-group > :nth-child(2) > .btn').click();\ncy.url().should(\"include\", \"orderoffer/index\");",
+              "err": {},
+              "uuid": "b51516c6-6158-48d9-a432-40d56e6365f5",
+              "parentUUID": "4ef24b7b-b304-492f-b309-5267e97b9520",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0177ed0b-b39c-4ba0-bd15-62c7923a7991",
+            "439c1f6c-ebc9-48be-8bc5-d9ca678d242c",
+            "b51516c6-6158-48d9-a432-40d56e6365f5"
+          ],
+          "failures": [
+            "e0e8f5c3-9831-415e-88c3-95c2a5ea6a4b"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 75401,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
